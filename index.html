@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Screen Background Video</title>
+  <script src="src/jquery.min.js"></script>
+  <script>window.$ = window.jQuery = require('jquery');</script>
+  <script src="src/typed.min.js"></script>
+  <script src="src/queryFunctions.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="overlay"></div>
+
+  <span id="gladosBox"></span>
+  <span id="typed"></span>
+  <input id="userBox" type="text" />
+
+
+<video id="my-video" class="video" muted loop>
+  <source src="media/computerBG.mp4" type="video/mp4">
+</video><!-- /video -->
+
+<script>
+(function() {
+  /**
+   * Video element
+   * @type {HTMLElement}
+   */
+  var video = document.getElementById("my-video");
+
+  /**
+   * Check if video can play, and play it
+   */
+  video.addEventListener( "canplay", function() {
+    video.play();
+  });
+})();
+</script>
+
+</body>
+</html>
